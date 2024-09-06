@@ -5,34 +5,28 @@ import Card from '../components/Card.astro';
 export const prerender = true;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Curso de TDD">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+		<h1>Seja bem-vindo!</h1>
+		<hr>
+		<h2>Curso de Introdução ao Desenvolvimento Orientado a Testes (TDD) e ao profissionalismo na programação</h2>
+		<ul>
+			<li>
+				<a href="./demo" target="_blank" rel="noopener noreferrer">Unidade 1</a>
+			</li>
+			<li>
+				<a href="./unidade-2" target="_blank" rel="noopener noreferrer">Unidade 2</a>
+			</li>
+			<li>
+				<a href="./unidade-3" target="_blank" rel="noopener noreferrer">Unidade 3</a>
+			</li>
+		</ul>
+		<h3>Pré-requisitos</h3>
+		<ul>
+			<li>Java 21 (Recomendo <a href="https://jdk.java.net/java-se-ri/21" target="_blank" rel="noopener noreferrer">OpenJDK 21 LTS</a>)</li>
+			<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener noreferrer">Apache Maven 3 </a></li>
+			<li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a> com a Extensão <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack" target="_blank" rel="noopener noreferrer">"Extension Pack for Java"</a></li>
+			<li>ou <a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener noreferrer">IntelliJ IDEA</a></li>
 		</ul>
 	</main>
 </Layout>
