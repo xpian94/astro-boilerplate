@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+import { Image } from 'astro:assets';
+import image1 from '../assets/img-1.png';
+import image2 from '../assets/img-2.png';
+import image3 from '../assets/img-3.png';
+import image4 from '../assets/img-4.png';
+
+export const prerender = true;
+---
+
+<Layout title="Tutorial - Codespaces">
+	<main>
+        <h3>1. Crie uma conta no GitHub (caso não tenha)</h3>
+        <span><a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">Crie uma conta do GitHub (gratuito)!</a></span>
+
+        <h3>2. Acesse o Codespaces (precisa estar logado ou logar com sua conta do GitHub)</h3>
+        <span>Visite o site do <a href="https://github.com/codespaces" target="_blank" rel="noopener noreferrer">Codespaces</a></span>
+
+        <h3>3. Criando um projeto: use o "blank project"</h3>
+        <p>
+            <Image src={image1} alt="" width={image1.width / 2} />
+        </p>
+
+        <span>Um ambiente como este irá aparecer</span>
+        <p>
+            <Image src={image2} alt="" width={image2.width / 4} />
+        </p>
+
+        <span>Observe que o Codespace já possui Java 21 e Maven instalados</span>
+
+        <p>
+            <Image src={image3} alt="" width={image3.width / 2} />
+        </p>
+
+        <h3>4. Faça o clone do repositório de base para o curso</h3>
+
+        <p>
+            <code>
+                git clone https://github.com/xpian94/projeto-java-tdd
+            </code>
+        </p>
+
+        <h3>5. Acesse a pasta do repositório clonado</h3>
+
+        <p>
+            <code>
+                cd project-java-tdd
+            </code>
+        </p>
+
+        <h3>6. Verifique se o comando de teste do Maven é capaz de ser executado com sucesso</h3>
+
+        <p>
+            <code>mvn clean test</code>
+        </p>
+
+        <span>Como se vê, espera-se</span>
+
+        <p>
+            <Image src={image4} alt="" width={image4.width / 2} />
+        </p>
+
+        <span>Está pronto para o curso!</span>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
