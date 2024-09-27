@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
 export const prerender = true;
+
+const signUpUrl = "https://forms.office.com/pages/responsepage.aspx?id=pSpdumYi7kiOQvp91Vurj45_9kdqNKpGggza4EFVFvpUMlQ1Q1o2VjFERUlUMUdJUUgzT1NMNlozVy4u&origin=QRCode&qrcodeorigin=presentation&route=shorturl"
+
 ---
 
 <Layout title="Curso de TDD">
@@ -22,6 +25,9 @@ export const prerender = true;
 				Unidade 3 (em breve)
 			</li>
 		</ul>
+		<h2>Ainda não se inscreveu?!</h2>
+		<span><a href={signUpUrl} target="_blank" rel="noopener noreferrer">Increva-se aqui!</a></span>
+
 		<h2>Tutorial para criar ambiente de programação do curso: uso do Codespaces</h2>
 		<span><a href="./codespaces" target="_blank" rel="noopener noreferrer">Configurando com Codespace (requer conta do GitHub)</a></span>
 		
